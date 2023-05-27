@@ -51,7 +51,7 @@ export const TablaEstudiante = ({ listaEstudiantes }) => {
 
   return (
     <>
-      <form onSubmit={buscarEstFac}>
+      <form onSubmit={buscarEstFac} className="color">
         <br />
         <div className="form-group input-group">
 
@@ -139,7 +139,16 @@ export const TablaEstudiante = ({ listaEstudiantes }) => {
               </tbody>
             </table>
           </div>
+
         )}
+      <style>
+        {`
+        .color {
+         background-color: #AD9978 ;
+        color: white; 
+        }
+`}
+      </style>
     </>
   );
 };
