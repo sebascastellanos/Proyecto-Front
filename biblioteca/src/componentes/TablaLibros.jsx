@@ -2,15 +2,15 @@ import { useState } from "react";
 
 export const TablaEstudiante = ({ listaEstudiantes }) => {
 
- 
+
   const [buscarFac, setBuscarFac] = useState("");
-  
+
   const [estudiantesEncontradosFac, setEstudiantesEncontradosFac] = useState([]);
 
   const editar = (event) => {
-    
 
-    
+
+
   }
 
   function deleteRow(event) {
@@ -32,7 +32,7 @@ export const TablaEstudiante = ({ listaEstudiantes }) => {
     return listaEstudiantes.filter((estudiante) => estudiante.facultad == facultad)
   }
 
-  
+
 
   const buscarEstFac = (event) => {
     event.preventDefault();
@@ -40,18 +40,18 @@ export const TablaEstudiante = ({ listaEstudiantes }) => {
     setEstudiantesEncontradosFac(estudiantesEncontrados);
   };
 
- 
+
 
   const limpiarBusqueda = () => {
-    
+
     setBuscarFac("");
-   
+
     setEstudiantesEncontradosFac([]);
   };
 
   return (
     <>
-      <form onSubmit={buscarEstFac}>
+      <form onSubmit={buscarEstFac} className="color">
         <br />
         <div className="form-group input-group">
 
@@ -73,7 +73,7 @@ export const TablaEstudiante = ({ listaEstudiantes }) => {
 
       {
         estudiantesEncontradosFac.length > 0 ? (
-         
+
           <div>
             <h3>Estudiante encontrado:</h3>
             <table className="table">
@@ -139,7 +139,16 @@ export const TablaEstudiante = ({ listaEstudiantes }) => {
               </tbody>
             </table>
           </div>
+
         )}
+      <style>
+        {`
+        .color {
+         background-color: #AD9978 ;
+        color: white; 
+        }
+`}
+      </style>
     </>
   );
 };

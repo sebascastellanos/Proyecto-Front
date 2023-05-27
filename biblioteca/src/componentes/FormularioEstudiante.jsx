@@ -38,21 +38,22 @@ export const FormularioEstudiante = ({ agregar }) => {
             <script>
 
             </script>
-            <h1 className="text-center text-light " style={{ fontSize: "100px", backgroundColor: "#AD9978" }}>Biblioteca</h1>
             
-                <form onSubmit={guardarLibro} style={{ backgroundColor: "#AD9978" }}>
+            
+                <form onSubmit={guardarLibro} className="estilo">
+                    <h1 className="text-center text-light " style={{ fontSize: "100px", backgroundColor: "#AD9978" }}>Biblioteca</h1>
                     <div className="form-group input-group">
-                        <label class="input-group-text futurama " for="inputGroupSelect01" >Titulo</label>
+                        <label className="input-group-text futurama " for="inputGroupSelect01" >Titulo</label>
                         <input type="text" className="form-control" id="titulo" placeholder="Titulo" value={titulo} onChange={(event) => setTitulo(event.target.value)} />
                     </div>
                     <br />
                     <div className="form-group input-group ">
-                        <label class="input-group-text futurama" for="inputGroupSelect01">Autor</label>
+                        <label className="input-group-text futurama" for="inputGroupSelect01">Autor</label>
                         <input type="text" className="form-control" id="autor" placeholder="Autor" value={autor} onChange={(event) => setAutor(event.target.value)} />
                     </div>
                     <br />
                     <div className="form-group input-group">
-                        <label class="input-group-text futurama" for="inputGroupSelect01">Genero</label>
+                        <label className="input-group-text futurama" for="inputGroupSelect01">Genero</label>
                         <br></br>
                         <select id="genero" value={genero} onChange={(event) => { setGenero(event.target.value); habilitarButton(); }}>
                             <option value="">--Seleccione el genero--</option>
@@ -92,6 +93,10 @@ export const FormularioEstudiante = ({ agregar }) => {
             font-family: 'Arial', sans-serif;
             font-size: 14px;
             text-transform: uppercase;
+            
+          }
+          .estilo{
+            background-color: #AD9978;
             
           }
 
