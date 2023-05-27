@@ -89,8 +89,8 @@ export const TablaEstudiante = ({ listaEstudiantes }) => {
               <tbody>
                 {estudiantesEncontradosFac.map((estudiante, index) => (
                   <tr key={index}>
-                    <td>{estudiante.id}</td>
-                    <td>{estudiante.nombre}</td>
+                    <td>{estudiante.titulo}</td>
+                    <td>{estudiante.autor}</td>
                     <td>{estudiante.semestre}</td>
                     <td>{estudiante.facultad}</td>
                     <td>{estudiante.genero}</td>

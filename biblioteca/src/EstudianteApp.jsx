@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { FormularioEstudiante } from "./componentes/FormularioEstudiante";
-import { TablaEstudiante } from "./componentes/TablaEstudiante";
+import { TablaEstudiante } from "./componentes/TablaLibros";
 import { getEstudiantes } from "./peticiones/getEstudiantes";
 import { postEstudiante } from "./peticiones/postEstudiante";
 import { editarEstudiante } from "./peticiones/editarEstudiante";
